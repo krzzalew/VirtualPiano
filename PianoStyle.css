@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Niconne&family=Oxygen&display=swap');
+
+* {
+    box-sizing: border-box;
+    text-align: center;
+    user-select: none;
+}
+
+body {
+    background: bisque url("the-speaker-grill.jpg") center/cover fixed;
+}
+
+h1 {
+    color: white;
+    font-family: 'Niconne', cursive;
+    font-size: 3em;
+    font-weight: 700;
+    text-shadow: 0 1px darkred,
+                 0 -1px darkred,
+                 1px 0 darkred,
+                 -1px 0 darkred,
+                 2px 2px saddlebrown,
+                 3px 3px salmon;
+}
+
+.container {
+    background-color: #333;
+    border-radius: 20px;
+    box-shadow: 8px 8px 12px;
+    margin: auto;
+    padding: 2vw 4vw;
+    position: relative;
+    width: 78vw;
+}
+
+kbd {
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Oxygen', sans-serif;
+    font-size: medium;
+}
+
+.white-keys {
+    display: flex;
+    justify-content: center;
+}
+
+.white-keys kbd {
+    background-color: white;
+    border: 3px outset;
+    border-radius: 5px;
+    box-shadow: 4px 4px 6px;
+    flex: auto;
+    height: 60vh;
+    padding: 45vh 0 0;
+    transform-origin: top;
+    transition: transform 0.4s;
+    z-index: 1;
+}
+
+.black-keys {
+    display: flex;
+    position: absolute;
+    left: 12vw;
+    top: 2vw;
+}
+
+.black-keys kbd {
+    background: linear-gradient(#111, #444, #000) bottom/100% 200%;
+    border: 4px outset #666;
+    color: white;
+    height: 36vh;
+    width: 4vw;
+    margin-right: 6vw;
+    padding: 20vh 0 0;
+    transition: background-position 0.4s;
+    z-index: 2;
+}
+
+.black-keys kbd:nth-child(2) {
+    margin-right: 16vw;
+}
+
+.black-keys kbd:hover {
+    outline: 1px solid black;
+}
+
+.white-keys kbd:hover {
+    background-color: #eee;
+}
+
+@media only screen and (max-width: 768px) {
+    kbd {
+        font-size: small;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    kbd {
+        font-size: x-small;
+    }
+}
